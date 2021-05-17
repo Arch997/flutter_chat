@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "733606426719",
+    "project_id": "zuri-chat-app",
+    "storage_bucket": "zuri-chat-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733606426719:android:aad5c79d48ffebbf83c3ea",
+        "android_client_info": {
+          "package_name": "com.example.zuri_chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733606426719-emnln8vbteojrq6v0rt645flf3b6rooa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKhKzL9kDFqzBEwYvXUzmUxcMKXEhe9l0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733606426719-emnln8vbteojrq6v0rt645flf3b6rooa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
