@@ -19,8 +19,9 @@ class _SignUpState extends State<SignUp> {
 
   bool isLoading = false;
   AuthService _authService = AuthService();
-  late File _image;
+  File _image = File('');
   final picker = ImagePicker();
+  bool _isHidden = true;
 
   signUp() async {
       await _authService.signUpEmailAndPassword(
@@ -113,7 +114,7 @@ class _SignUpState extends State<SignUp> {
                   ),
                   SizedBox(height: 10),
                   TextFormField(
-                    obscureText: true,
+                    obscureText: _isHidden,
                     validator: (val) {
                       return val!.length > 6 ? null 
                       : 'Enter password of more than 6 characters';
@@ -126,6 +127,12 @@ class _SignUpState extends State<SignUp> {
                         borderRadius: BorderRadius.circular(20),
                         borderSide: BorderSide(color: Colors.white70),
                       ),
+                      suffix: InkWell(
+                        onTap: () => toggleShowPassword(),
+                        child: _isHidden ? 
+                            Icon(Icons.visibility_off) :
+                            Icon(Icons.visibility),
+                      ),
                     ),
                     controller: passwordController,
                   ),
@@ -133,7 +140,6 @@ class _SignUpState extends State<SignUp> {
                 ],
               ),
             ),
-            SizedBox(height: 9),
          
             Container(
               child: ElevatedButton(
@@ -258,6 +264,8 @@ class _SignUpState extends State<SignUp> {
       }
     );
   }
+
+  void toggleShowPassword() => setState(() => _isHidden = !_isHidden);
 }
 
 
